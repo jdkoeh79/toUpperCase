@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>toUpperCase</title>
+	<!-- <link rel="stylesheet" href="bootstrap.css" type="text/css" /> -->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+	<!-- <div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"> -->
+				Convert to Uppercase: <br />
+				<input id="inputbox" type="text" name="inputbox" value=""><br />
+				<input class="bt btn-primary" id="button" type="button" name="button" value="Convert" onclick="toUpper()" />
+
+				<div id="output">
+				</div>
+			<!-- </div> -->
+		
+
+			<!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"> -->
+				<div id="history">
+				</div>
+			<!-- </div> -->
+
+		<!-- </div> row -->
+
+			<div id="footer">
+			Coded by Justin Koehler - 10/26/2016
+			</div>
+
+			<script>
+
+			function toUpper() {
+				var lower = document.getElementById("inputbox").value;
+				document.getElementById("output").innerHTML = lower.toUpperCase();
+				addToHistory();
+				clearField();
+			}
+
+			document.getElementById("inputbox").addEventListener("keyup", function(event) {
+		    	event.preventDefault();
+		    	if (event.keyCode == 13) {
+		        	document.getElementById("button").click();
+		    	}
+			});
+
+			function clearField() {
+				document.getElementById("inputbox").value = "";
+			}
+
+			function addToHistory() {
+				var lower = document.getElementById("inputbox").value;
+				var upper = document.getElementById("output").innerHTML;
+				var history = document.getElementById("history");
+				history.insertAdjacentHTML("afterBegin", lower + " --> " + upper + "<br /><br />");  // http://jsfiddle.net/euQ5n/
+			}
+
+			</script>
+	<!-- </div> --> <!-- container -->
+</body>
+</html>

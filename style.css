@@ -4,17 +4,16 @@ body {
 	background-repeat: repeat;
 	color: white;
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 50px;
-	margin: 50px auto 0;
+	font-size: 16px;
 	text-align: center;
+}
+
+h1 {
+	margin: 20px auto 0;
 }
 
 #button {
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 25px;
-	height: 40px;
-	margin: 0;
-	width: 200px;
 }
 
 #footer {
@@ -26,33 +25,101 @@ body {
 	padding: .5rem;
 	position: fixed;
 	right: 0;
-	text-align: center;
 }
 
 #history {
+	display: block;
 	border-radius: 10px;
 	background-color: rgba(33,33,33,.5);
-	font-size: 16px;
-	height: 300px;
-	margin: 0 auto;
-	overflow-y: auto;
-	padding: 14px;
-	width: 500px;
+	width: 100%;
+	height: 70vh;
+	margin-top: 14vh;
 }
 
-input {
+h4 {
+	margin: 0;
+	padding: 5px 5px 5px 10px;
+	text-align: left;
+	background-color: #565656;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#history-output {
+	display: block;
+	overflow-y: auto;
+	height: 68vh;
+}
+
+#input {
+		height: 49vh;
+		padding-top: 12vh;
+}
+
+#input-box {
+	color: black;
 	border-radius: 5px;
-	font-size: 25px;
-	height: 30px;
-	margin-bottom: 10px;
-	width: 500px;
+	width: 90%;
+	margin: 20px auto 25px;
+	max-width: 500px;
 }
 
 #output {
-	height: 62px;
+	font-size: 2em;
+	padding: 40px 0 130px;
+	height: 49vh;
+	word-wrap: break-word; 
+	max-width: 400px;
 	margin: 0 auto;
-	padding: 110px 0;;
 }
 
+.container {
+	margin-right: 2vw;
+	margin-left: 2vw;
+	width: auto;
+}
 
+.btn-lg {
+	padding: 10px 50px;
+}
 
+#io-col {
+	height: 96vh;
+}
+
+.fade {
+	display: none;
+}
+
+@media (max-width: 992px) {
+	body {
+		font-size: 24px;
+	}
+
+	.container {
+		margin-top: 0;
+	}
+
+	#io-col {
+		height: 100vh;
+	}
+
+	#input {
+		height: 46vh;
+		padding-top: 10vh;
+	}
+
+	#output {
+		height: 46vh;
+	}
+
+	#history {
+		margin-top: 0;
+		margin-bottom: 15px;
+		height: 97vh;
+	}
+
+	.fade {
+		display: inline;
+	}
+}

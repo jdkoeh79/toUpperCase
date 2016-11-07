@@ -3,19 +3,24 @@ function toUpper() {
 	if (lower[lower.length - 1] == "?") {
 		document.getElementById("output").innerHTML = "Who do you think I am? Jeeves? Jeez.";
 	}
+	else if (lower.slice(lower.length - 13) == " to pig latin") {
+		toPigLatin(lower);
+	}
 	else if (lower == "") {
 		document.getElementById("output").innerHTML = "You must enter an input.";
 	}
 	else if (lower.toLowerCase() == "mikhael") {
-		document.getElementById("output").innerHTML = "Web developer. Network Admin. Printer repair man!";
-		clearField();
+		document.getElementById("output").innerHTML = "Web developer. Network Admin. Digital Super Hero!";
 	}
 	else if (lower.toLowerCase() == "justin") {
 		document.getElementById("output").innerHTML = "Aspiring Web Developer and Author of this page.";
-		clearField();
 	}
 	else if (lower.toLowerCase() == "danny") {
 		document.getElementById("output").innerHTML = "They say he fought a bear and lived... with one hand tied behind his back!";
+	}
+	else if (lower.toLowerCase() == "chuck norris") {
+		document.getElementById("output").innerHTML = "Cannot convert to uppercase.  CHUCK NORRIS is uppercase by default.";
+		addToHistory();
 		clearField();
 	}
 	else {
@@ -40,7 +45,31 @@ function addToHistory() {
 	var lower = document.getElementById("input-box").value;
 	var upper = document.getElementById("output").innerHTML;
 	var history = document.getElementById("history-output");
+	if (lower.toLowerCase() == "chuck norris") {
+		history.insertAdjacentHTML("afterBegin", "<br />" + lower.toUpperCase() + " --> " + lower.toUpperCase() + "<br />");
+	}
+	else {
 	history.insertAdjacentHTML("afterBegin", "<br />" + lower + " --> " + upper + "<br />");  // http://jsfiddle.net/euQ5n/
+	}
+}
+
+function toPigLatin(lower) {
+	input = lower.slice(0, lower.length - 13);
+	var inputArr = input.split(/, | /);
+	var matches = input.match(/\d+/g);
+	var outputArr = [];
+	var output = "";
+	if (matches != null) {
+		document.getElementById("output").innerHTML = "Number characters cannot be translated. Please try again.";
+	}
+	else {
+		for (var i in inputArr) {
+			outputArr.push(inputArr[i].slice(1, inputArr[i].length) + inputArr[i].slice(0, 1) + "ay");
+		}
+		output = outputArr.join(" ");
+		document.getElementById("output").innerHTML = output;
+		clearField();
+	}
 }
 
 $(window).scroll(function() {

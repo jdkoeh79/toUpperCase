@@ -30,7 +30,7 @@ h1 {
 #history {
 	display: block;
 	border-radius: 10px;
-	max-width: 42vw;
+	max-width: 45vw;
 	height: 70vh;
 	margin-top: 14vh;
 }
@@ -56,7 +56,7 @@ h4 {
 }
 
 #input {
-		height: 49vh;
+		height: 34vh;
 		padding-top: 12vh;
 }
 
@@ -70,7 +70,7 @@ h4 {
 
 #output {
 	font-size: 2em;
-	padding: 40px 0 130px;
+	padding: 20vh 0 29vh;
 	height: 49vh;
 	word-wrap: break-word;
 	width: 100%;
@@ -111,12 +111,14 @@ h4 {
 	}
 
 	#input {
-		height: 46vh;
+		height: 26vh;
 		padding-top: 10vh;
 	}
 
 	#output {
-		height: 46vh;
+		height: 66vh;
+		padding: 30vh 0 20vh;
+		width: 100%;
 	}
 
 	#history {

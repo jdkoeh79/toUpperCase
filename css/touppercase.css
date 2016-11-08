@@ -1,6 +1,6 @@
 body {
 	background-color: #2C2C2E;
-	background-image: url("congruent_outline.png");
+	background: url("images/congruent_outline.png") repeat;
 	background-repeat: repeat;
 	color: white;
 	font-family: Verdana, Geneva, sans-serif;

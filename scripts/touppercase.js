@@ -3,20 +3,11 @@ function toUpper() {
 	if (lower[lower.length - 1] == "?") {
 		document.getElementById("output").innerHTML = "Who do you think I am? Jeeves? Jeez.";
 	}
-	else if (lower.slice(lower.length - 13) == " to pig latin") {
+	else if (lower.slice(lower.length - 4) == " tpl") {
 		toPigLatin(lower);
 	}
-	else if (lower == "") {
+	else if (lower === "") {
 		document.getElementById("output").innerHTML = "You must enter an input.";
-	}
-	else if (lower.toLowerCase() == "mikhael") {
-		document.getElementById("output").innerHTML = "Web developer. Network Admin. Digital Super Hero!";
-	}
-	else if (lower.toLowerCase() == "justin") {
-		document.getElementById("output").innerHTML = "Aspiring Web Developer and Author of this page.";
-	}
-	else if (lower.toLowerCase() == "danny") {
-		document.getElementById("output").innerHTML = "They say he fought a bear and lived... with one hand tied behind his back!";
 	}
 	else if (lower.toLowerCase() == "chuck norris") {
 		document.getElementById("output").innerHTML = "Cannot convert to uppercase.  CHUCK NORRIS is uppercase by default.";
@@ -54,12 +45,12 @@ function addToHistory() {
 }
 
 function toPigLatin(lower) {
-	input = lower.slice(0, lower.length - 13);
+	input = lower.slice(0, lower.length - 4);
 	var inputArr = input.split(/, | /);
 	var matches = input.match(/\d+/g);
 	var outputArr = [];
 	var output = "";
-	if (matches != null) {
+	if (matches !== null) {
 		document.getElementById("output").innerHTML = "Number characters cannot be translated. Please try again.";
 	}
 	else {

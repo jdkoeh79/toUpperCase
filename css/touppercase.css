@@ -1,7 +1,6 @@
 body {
 	background-color: #2C2C2E;
-	background: url("images/congruent_outline.png") repeat;
-	background-repeat: repeat;
+	background: url("images/Sleek-Dark-Background.jpg");
 	color: white;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
@@ -36,18 +35,26 @@ h1 {
 }
 
 h4 {
+	color: rgb(192, 192, 192);
 	margin: 0;
 	padding: 5px 5px 5px 10px;
 	text-align: left;
-	background-color: #565656;
+	background-image: linear-gradient(-90deg, black, rgb(44, 44, 44)); /* Standard syntax (must be last) */
+	/* background-color: rgba(20, 20, 20, 0.897); */
+	border-top: 1px solid #2C2C2E;
+	border-left: 1px solid #2C2C2E;
+	border-right: 1px solid #2C2C2E;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 }
 
 #history-output {
-	background-color: rgba(33,33,33,.5);
+	background-color: rgba(33,33,33,.3);
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+	border-bottom: 1px solid #2C2C2E;
+	border-left: 1px solid #2C2C2E;
+	border-right: 1px solid #2C2C2E;
 	display: block;
 	overflow-y: auto;
 	height: 68vh;
@@ -86,6 +93,16 @@ h4 {
 
 .btn-lg {
 	padding: 10px 50px;
+}
+
+.btn-primary {
+	background-color: rgb(20, 20, 20);
+	border: 1px solid #434343;
+}
+
+.btn-primary:hover {
+	background-color: rgb(36, 36, 36);
+	border: 1px solid #434343;
 }
 
 #io-col {

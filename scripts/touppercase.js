@@ -9,6 +9,10 @@ function toUpper() {
 	else if (lower === "") {
 		document.getElementById("output").innerHTML = "You must enter an input.";
 	}
+	else if (lower === "clear" || lower === "cls") {
+		document.getElementById("output").innerHTML = "";
+		clearField();
+	}
 	else if (lower.toLowerCase() == "chuck norris") {
 		document.getElementById("output").innerHTML = "Cannot convert to uppercase.  CHUCK NORRIS is uppercase by default.";
 		addToHistory();
